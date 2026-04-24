@@ -368,13 +368,14 @@
 
 <header class="hero">
   <div class="kicker">UX / Service Design — Banka 2030</div>
-  <h1>Dva koncepty do další discovery fáze</h1>
-  <p>Konceptový brief pro dvě vybraná témata: <strong>AI finanční rádce</strong> s delegovanou autonomií a sjednoceným pohledem, a <strong>embedded finance</strong> jako nová distribuční vrstva. Pro každý koncept persona, scénář, journey mapa, obrazovky, dopad a rizika.</p>
+  <h1>Tři koncepty do další discovery fáze</h1>
+  <p>Konceptový brief pro tři vybraná témata: <strong>AI finanční rádce</strong> s delegovanou autonomií a sjednoceným pohledem, <strong>embedded finance</strong> jako nová distribuční vrstva a <strong>bezpečnost</strong> v podobě AI anti-fraud štítu a digitálního trezoru. Pro každý koncept persona, scénář, journey mapa, obrazovky, dopad a rizika.</p>
 </header>
 
 <div class="tabs" role="tablist">
   <button class="tab active" data-tab="ai">AI rádce</button>
   <button class="tab" data-tab="embedded">Embedded finance</button>
+  <button class="tab" data-tab="security">Bezpečnost</button>
 </div>
 
 <!-- KONCEPT 1: AI RÁDCE -->
@@ -1046,6 +1047,357 @@
           <li>Fragmentace UX — banka nekontroluje design widgetu; nutné jasné design tokeny</li>
           <li>Fraud v bodě prodeje — passkey a EUDI pomáhají, ale útoky se posouvají na sociální vrstvu</li>
           <li>Regulatorní pasti — CCD II vyžaduje plnou evaluaci bonity i u malých částek</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- KONCEPT 3: BEZPEČNOST -->
+<div class="panel" id="panel-security">
+
+  <section class="block">
+    <h2>1 — Kontext a persona</h2>
+    <div class="two-col">
+      <div>
+        <h3>AI anti-fraud štít a digitální trezor</h3>
+        <p>Banka chrání nejen účet, heslo a zařízení, ale i člověka v momentě stresu, tlaku nebo manipulace. AI štít v reálném čase detekuje anomálie v chování, zpomalí nebo zastaví rizikovou akci a v krizi nabídne lidský kontakt do 60 sekund. Digitální trezor sdružuje kritické dokumenty, oprávnění třetích stran a přehled zařízení — klient má jednou provždy jasno, kdo a co vidí.</p>
+        <div class="scenario-box">
+          <strong>Situace:</strong> Petr je v pondělí ráno pod časovým tlakem. Přijde mu volání od „bankéře" s jeho jménem — hlas zní věrohodně (deepfake). Útočník vytváří urgenci a tlačí ho k okamžitému převodu 180 000 Kč na „zabezpečený účet". Normálně by takovou žádost odmítl, ale teď je roztěkaný.
+        </div>
+        <div class="scenario-box">
+          <strong>Poznámka:</strong> Zranitelnost je situační, ne segmentová. Stejně chráněný musí být senior, který ztratí orientaci v nové appce, i IT ředitel pod stresem. Koncept pracuje s různými úrovněmi asistence.
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-head">
+          <div class="avatar" style="background: #dc2626;">P</div>
+          <div>
+            <div class="persona-name">Petr, 45</div>
+            <div class="persona-meta">Marketingový ředitel, Praha</div>
+          </div>
+        </div>
+        <p style="margin: 4px 0 10px; font-size: 13px;">Rodina, stabilní vysoký příjem, časté platby. Velmi vysoká digitální gramotnost, běžně filtruje phishing. Slabina: v momentě stresu nebo časového tlaku reaguje rychle a přestává ověřovat.</p>
+        <div>
+          <span class="tag">Velmi vysoká digitální gramotnost</span>
+          <span class="tag">Časový tlak</span>
+          <span class="tag">Situační zranitelnost</span>
+          <span class="tag">Motivace: rychlost, klid</span>
+          <span class="tag">Odmítá „nanny banking"</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>2 — Cíl a scénář</h2>
+    <h3>Zastavit špatnou transakci dřív, než dojde ke škodě — a obnovit stav, když už k ní došlo</h3>
+    <p><strong>Cíl uživatele:</strong> být chráněn i v momentě, kdy sám udělá chybu pod tlakem. Mít jistotu, že banka za svojí ochranou stojí, a že se dá incident vrátit zpět.</p>
+    <p><strong>Cíl banky:</strong> snížit ztráty z APP scamů, splnit PSD3/PSR (refund jako default), vybudovat důvěru skrze viditelnou ochranu.</p>
+    <div class="scenario-box">
+      <strong>Scénář:</strong> Petr potvrdí převod 180 000 Kč. AI štít v milisekundách vyhodnotí: neobvyklý příjemce, neobvyklá částka, telefonní hovor 4 minuty před transakcí, behaviorální anomálie (rychlejší tempo psaní, atypický pohyb v appce). Spustí <em>Safe Stop</em> — transakce není odeslána, místo toho se objeví obrazovka s kontextem: „Viděli jsme několik neobvyklých signálů. Dáme si spolu 60 sekund?" Petr vidí tři otázky (je to pro tebe nové spojení? mluvils s někým kdo ti volal? máš na to čas v klidu?), jeho jistota klesá. Klepne na <em>Mluvit s člověkem</em>. Do 45 sekund ho volá specialista, který transakci ruší a zahajuje proces obnovy.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>3 — Customer journey</h2>
+    <h3 style="margin-bottom: 18px;">Pět fází od detekce rizika po obnovu a prevenci</h3>
+    <div class="journey">
+
+      <div class="phase">
+        <div class="phase-head">1 · Detekce</div>
+        <div class="phase-body">
+          <div>
+            <p class="phase-label">Kroky</p>
+            <ul>
+              <li>AI vyhodnocuje kontext v reálném čase</li>
+              <li>Srovnává s běžným chováním</li>
+            </ul>
+          </div>
+          <div>
+            <p class="phase-label">Touchpoint</p>
+            <ul><li>Back-end AI, behaviorální signály</li></ul>
+          </div>
+          <div class="emoji-strip">
+            <span class="mood">Neuvědomění</span>
+            <div class="mood-bar"><div class="mood-fill" style="width: 40%; background: var(--accent);"></div></div>
+          </div>
+          <div class="pain">
+            <span class="label-pain">Pain</span>
+            <p>Pod manipulací uživatel neví, že je v riziku</p>
+            <span class="label-opp">Opportunity</span>
+            <p>Neviditelná ochrana bez rušení běžných transakcí</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">2 · Intervence</div>
+        <div class="phase-body">
+          <div>
+            <p class="phase-label">Kroky</p>
+            <ul>
+              <li>Safe Stop zastaví transakci</li>
+              <li>Zobrazí vysvětlení a otázky</li>
+            </ul>
+          </div>
+          <div>
+            <p class="phase-label">Touchpoint</p>
+            <ul><li>App, in-flow breaker</li></ul>
+          </div>
+          <div class="emoji-strip">
+            <span class="mood">Překvapení</span>
+            <div class="mood-bar"><div class="mood-fill" style="width: 50%; background: var(--accent);"></div></div>
+          </div>
+          <div class="pain">
+            <span class="label-pain">Pain</span>
+            <p>Frustrace z „zbytečného" zdržení</p>
+            <span class="label-opp">Opportunity</span>
+            <p>Kontext, ne plošné blokace; vysvětlit „proč"</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">3 · Ověření</div>
+        <div class="phase-body">
+          <div>
+            <p class="phase-label">Kroky</p>
+            <ul>
+              <li>Klient odpovídá na 3 kontextové otázky</li>
+              <li>Aktivuje lidskou podporu</li>
+            </ul>
+          </div>
+          <div>
+            <p class="phase-label">Touchpoint</p>
+            <ul><li>App, hlasový hovor, chat s člověkem</li></ul>
+          </div>
+          <div class="emoji-strip">
+            <span class="mood">Obava, úleva</span>
+            <div class="mood-bar"><div class="mood-fill" style="width: 55%; background: var(--brand);"></div></div>
+          </div>
+          <div class="pain">
+            <span class="label-pain">Pain</span>
+            <p>Chatbot v krizi, dlouhé čekání</p>
+            <span class="label-opp">Opportunity</span>
+            <p>Lidský poradce do 60 s s plným kontextem</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">4 · Obnova</div>
+        <div class="phase-body">
+          <div>
+            <p class="phase-label">Kroky</p>
+            <ul>
+              <li>Transakce zrušena nebo vrácena</li>
+              <li>Blokace kompromitovaných kanálů</li>
+            </ul>
+          </div>
+          <div>
+            <p class="phase-label">Touchpoint</p>
+            <ul><li>App, e-mail, lidská podpora</li></ul>
+          </div>
+          <div class="emoji-strip">
+            <span class="mood">Úleva, důvěra</span>
+            <div class="mood-bar"><div class="mood-fill" style="width: 80%; background: var(--success);"></div></div>
+          </div>
+          <div class="pain">
+            <span class="label-pain">Pain</span>
+            <p>Týdny čekání na refund, papírování</p>
+            <span class="label-opp">Opportunity</span>
+            <p>Refund APP scamu jako default (PSD3/PSR)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">5 · Prevence</div>
+        <div class="phase-body">
+          <div>
+            <p class="phase-label">Kroky</p>
+            <ul>
+              <li>Post-incident report</li>
+              <li>Nastavení trezoru a oprávnění</li>
+            </ul>
+          </div>
+          <div>
+            <p class="phase-label">Touchpoint</p>
+            <ul><li>App, digitální trezor, edukace</li></ul>
+          </div>
+          <div class="emoji-strip">
+            <span class="mood">Kontrola</span>
+            <div class="mood-bar"><div class="mood-fill" style="width: 90%; background: var(--success);"></div></div>
+          </div>
+          <div class="pain">
+            <span class="label-pain">Pain</span>
+            <p>„Další incident se stane stejně"</p>
+            <span class="label-opp">Opportunity</span>
+            <p>Personalizovaná edukace + trezor jako štít</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>4 — Obrazovky konceptu</h2>
+    <h3 style="margin-bottom: 18px;">Pět klíčových obrazovek</h3>
+    <div class="screens-grid">
+
+      <div class="screen">
+        <div class="phone">
+          <div class="phone-inner">
+            <div class="statusbar"><span>09:12</span><span>···</span></div>
+            <div class="ui-card" style="background: #fef2f2; border-color: #fecaca;">
+              <div class="ui-title" style="color: #b91c1c;">Safe Stop — moment</div>
+              <p style="margin: 4px 0; font-size: 10px;">Viděli jsme několik neobvyklých signálů u této platby.</p>
+            </div>
+            <div style="font-size: 10px; color: var(--ink-muted);">
+              <div class="ui-row" style="padding: 3px 0;"><span>Nový příjemce</span><span class="dot r"></span></div>
+              <div class="ui-row" style="padding: 3px 0;"><span>Telefon 4 min před</span><span class="dot r"></span></div>
+              <div class="ui-row" style="padding: 3px 0;"><span>Vyšší tempo než obvykle</span><span class="dot a"></span></div>
+            </div>
+            <div class="ui-btn full" style="background: #dc2626;">Mluvit s člověkem</div>
+            <div class="ui-btn ghost full">Pokračovat po 60 s</div>
+          </div>
+        </div>
+        <div class="screen-caption">
+          <h4><span class="n">1</span>Safe Stop s kontextem</h4>
+          <p>Banka nezablokuje — zpomalí a dá kontext. Klient vidí proč a může se rozhodnout.</p>
+        </div>
+      </div>
+
+      <div class="screen">
+        <div class="phone">
+          <div class="phone-inner">
+            <div class="statusbar"><span>Štít</span><span>···</span></div>
+            <div class="ui-title" style="font-size: 12px;">Fraud Shield</div>
+            <div class="ui-card success">
+              <div class="ui-big" style="color: #065f46;">Aktivní</div>
+              <div class="ui-small">12 hrozeb zastaveno za 30 dní</div>
+            </div>
+            <div style="font-size: 10px; display: flex; flex-direction: column; gap: 3px;">
+              <div class="ui-list-item"><span><span class="dot g"></span>Behaviorální AI</span><span>Zapnuto</span></div>
+              <div class="ui-list-item"><span><span class="dot g"></span>Deepfake detekce</span><span>Zapnuto</span></div>
+              <div class="ui-list-item"><span><span class="dot g"></span>Geolokace</span><span>Zapnuto</span></div>
+              <div class="ui-list-item"><span><span class="dot g"></span>Ochrana před APP scam</span><span>Zapnuto</span></div>
+              <div class="ui-list-item"><span><span class="dot a"></span>Limit pro nové příjemce</span><span>5 000 Kč</span></div>
+            </div>
+            <div class="ui-btn ghost full">Upravit nastavení</div>
+          </div>
+        </div>
+        <div class="screen-caption">
+          <h4><span class="n">2</span>Fraud Shield dashboard</h4>
+          <p>Viditelná ochrana — klient ví, co banka hlídá a co zastavila. Důvěra z důkazů.</p>
+        </div>
+      </div>
+
+      <div class="screen">
+        <div class="phone">
+          <div class="phone-inner">
+            <div class="statusbar"><span>Krize</span><span>●</span></div>
+            <div class="ui-card" style="background: #dc2626; color: white; border: none;">
+              <div class="ui-title" style="color: white;">Volá ti poradce</div>
+              <p style="margin: 4px 0; font-size: 10px; opacity: .9;">do 45 sekund</p>
+            </div>
+            <div style="text-align: center; padding: 20px 0;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: #fee2e2; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 26px;">◉</div>
+              <div style="font-size: 11px; font-weight: 700;">Jana K.</div>
+              <div class="ui-small">Specialistka podvodů</div>
+            </div>
+            <div class="ui-card" style="background: var(--surface-2); border: none;">
+              <p class="ui-small" style="margin: 0;">Jana už vidí, co se stalo. Nemusíš vysvětlovat od začátku.</p>
+            </div>
+            <div class="ui-btn ghost full">Zrušit, jsem v pořádku</div>
+          </div>
+        </div>
+        <div class="screen-caption">
+          <h4><span class="n">3</span>Lidská pomoc do 60 s</h4>
+          <p>V krizi žádný chatbot. Poradce má plný kontext incidentu — klient nemusí opakovat.</p>
+        </div>
+      </div>
+
+      <div class="screen">
+        <div class="phone">
+          <div class="phone-inner">
+            <div class="statusbar"><span>Trezor</span><span>···</span></div>
+            <div class="ui-title" style="font-size: 12px;">Digitální trezor</div>
+            <div class="ui-card">
+              <div class="ui-row"><span class="ui-title">Doklady</span><span class="ui-small">4 ověřené</span></div>
+              <div class="ui-small">Občanka, ŘP, pas, karta pojištěnce</div>
+            </div>
+            <div class="ui-card" style="background: white; border: 1px solid var(--border);">
+              <div class="ui-row"><span class="ui-title">Oprávnění třetích stran</span><span class="ui-small">7 aktivních</span></div>
+              <div class="ui-small">Revolut, Alza, Amazon, 4 další</div>
+            </div>
+            <div class="ui-card" style="background: white; border: 1px solid var(--border);">
+              <div class="ui-row"><span class="ui-title">Zařízení</span><span class="ui-small">3 známá</span></div>
+              <div class="ui-small">iPhone, MacBook, Apple Watch</div>
+            </div>
+            <div class="ui-btn full" style="background: #dc2626;">Odvolat vše</div>
+          </div>
+        </div>
+        <div class="screen-caption">
+          <h4><span class="n">4</span>Digitální trezor</h4>
+          <p>Jedno místo pro doklady, oprávnění a zařízení. „Odvolat vše" v krizi jedním klepnutím.</p>
+        </div>
+      </div>
+
+      <div class="screen">
+        <div class="phone">
+          <div class="phone-inner">
+            <div class="statusbar"><span>09:47</span><span>···</span></div>
+            <div class="ui-card success">
+              <div class="ui-title">Vyřešeno</div>
+              <p style="font-size: 10px; margin: 3px 0;">Žádná škoda nevznikla</p>
+            </div>
+            <div style="font-size: 10px;">
+              <div class="ui-row" style="padding: 3px 0;"><span>Co se stalo</span><strong>Deepfake hovor</strong></div>
+              <div class="ui-row" style="padding: 3px 0;"><span>Ušetřeno</span><strong>180 000 Kč</strong></div>
+              <div class="ui-row" style="padding: 3px 0;"><span>Zablokovaná čísla</span><strong>2</strong></div>
+              <div class="ui-row" style="padding: 3px 0;"><span>Refund</span><strong>—</strong></div>
+            </div>
+            <div class="ui-card" style="background: #eff6ff;">
+              <p class="ui-small" style="margin: 0; color: var(--brand);">Chceš si projít, jak poznat deepfake hovor? 2 min</p>
+            </div>
+            <div class="ui-btn full">Projít edukaci</div>
+          </div>
+        </div>
+        <div class="screen-caption">
+          <h4><span class="n">5</span>Post-incident report</h4>
+          <p>Shrnutí co se stalo, co banka udělala a personalizovaná edukace. Incident jako učení.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>5 — Dopad a rizika</h2>
+    <div class="impact-grid">
+      <div class="impact-card good">
+        <h4>Hlavní přínos</h4>
+        <ul>
+          <li>Ochrana i v momentě lidské chyby, stresu a manipulace (nikoli jen technické hrozby)</li>
+          <li>Bezpečnostní UX jako zdroj důvěry — viditelný štít, nikoli skrytý algoritmus</li>
+          <li>Soulad s PSD3/PSR (refund APP scamů jako default) jako konkurenční výhoda</li>
+          <li>Redukce ztrát z podvodů a snížení nákladů na reklamace</li>
+          <li>Digitální trezor jako sticky prvek — klient odchází obtížněji</li>
+        </ul>
+      </div>
+      <div class="impact-card risk">
+        <h4>Rizika a dilemata</h4>
+        <ul>
+          <li>False positives — zpomalení legitimních transakcí frustruje</li>
+          <li>„Nanny banking" — přehnaná ochrana vyvolá odpor digitálně zdatných uživatelů</li>
+          <li>Deepfake a sociální útoky se vyvíjejí rychleji než detekční modely</li>
+          <li>Edge cases: zneužití blízkou osobou (domácí násilí, péče o seniora)</li>
+          <li>GDPR: behaviorální monitoring vyžaduje jasný právní základ a transparentnost</li>
+          <li>Kapacita lidské podpory — slib „do 60 s" je drahý a obtížně škálovatelný</li>
         </ul>
       </div>
     </div>
